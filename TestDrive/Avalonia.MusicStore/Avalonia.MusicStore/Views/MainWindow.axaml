@@ -11,6 +11,7 @@
         TransparencyLevelHint="AcrylicBlur" 
         Background="Transparent"
         ExtendClientAreaToDecorationsHint="True"
+        WindowStartupLocation="CenterScreen"
         >
 
     <Design.DataContext>
@@ -30,7 +31,7 @@
             </ExperimentalAcrylicBorder.Material>
         </ExperimentalAcrylicBorder>
         
-        <Button HorizontalAlignment="Right"
+        <Button HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Command="{Binding BuyMusicCommand}">
             <PathIcon Data="{StaticResource store_microsoft_regular}"></PathIcon>
