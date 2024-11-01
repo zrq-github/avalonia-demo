@@ -31,7 +31,8 @@
         </ExperimentalAcrylicBorder>
         
         <Button HorizontalAlignment="Right"
-                VerticalAlignment="Top">
+                VerticalAlignment="Top"
+                Command="{Binding BuyMusicCommand}">
             <PathIcon Data="{StaticResource store_microsoft_regular}"></PathIcon>
         </Button>
     </Panel>

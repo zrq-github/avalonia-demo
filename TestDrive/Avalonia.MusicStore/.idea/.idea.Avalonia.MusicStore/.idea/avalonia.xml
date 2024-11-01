@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Avalonia.MusicStore/App.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.csproj" />
+        <entry key="Avalonia.MusicStore/Icons.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.csproj" />
         <entry key="Avalonia.MusicStore/Views/MainWindow.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.csproj" />
       </map>
     </option>
