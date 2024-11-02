@@ -25,7 +25,7 @@ public class MainWindowViewModel : ViewModelBase
             }
         });
         
-        RxApp.MainThreadScheduler.Schedule(LoadAlbums);
+        //RxApp.MainThreadScheduler.Schedule(LoadAlbums);
     }
 #pragma warning disable CA1822 // Mark members as static
     public string Greeting => "Welcome to Avalonia!";

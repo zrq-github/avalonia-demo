@@ -12,8 +12,8 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         InitializeComponent();
         
-        // this.WhenActivated(action =>
-        //     action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
+        this.WhenActivated(action =>
+            action(ViewModel!.ShowDialog.RegisterHandler(DoShowDialogAsync)));
     }
     
     private async Task DoShowDialogAsync(InteractionContext<MusicStoreViewModel,
