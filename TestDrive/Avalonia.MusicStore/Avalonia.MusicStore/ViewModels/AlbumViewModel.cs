@@ -22,6 +22,24 @@ public class AlbumViewModel : ViewModelBase
         private set => this.RaiseAndSetIfChanged(ref _cover, value);
     }
 
+    public async Task SaveToDiskAsync()
+    {
+        await _album.SaveAsync();
+
+        if (Cover != null)
+        {
+            var bitmap = Cover;
+
+            await Task.Run(() =>
+            {
+                using (var fs = _album.SaveCoverBitmapStream())
+                {
+                    bitmap.Save(fs);
+                }
+            });
+        }
+    }
+    
     public string Artist => _album.Artist;
 
     public string Title => _album.Title;

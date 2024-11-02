@@ -15,7 +15,11 @@ public class MainWindowViewModel : ViewModelBase
         {
             var store = new MusicStoreViewModel();
             var result = await ShowDialog.Handle(store);
-            if (result != null) Albums.Add(result);
+            if (result != null)
+            {
+                Albums.Add(result);
+                await result.SaveToDiskAsync();
+            }
         });
     }
 #pragma warning disable CA1822 // Mark members as static
