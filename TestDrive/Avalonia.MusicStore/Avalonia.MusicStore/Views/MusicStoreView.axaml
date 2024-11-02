@@ -10,7 +10,16 @@
         <StackPanel DockPanel.Dock="Top">
             <TextBox Text="{Binding SearchText }" Watermark="Search for Albums...." />
             <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}"  />
-            <ListBox ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedAlbum}" />
+            <ListBox ItemsSource="{Binding SearchResults}" 
+                     SelectedItem="{Binding SelectedAlbum}" 
+                     Background="Transparent"
+                     Margin="0,20">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
         </StackPanel>
         <Button Content="Buy Album" 
                 DockPanel.Dock="Bottom" 
