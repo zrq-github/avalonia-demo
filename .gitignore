@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # rider
 .idea/*
+src/Avalonia.MusicStore/.idea/.idea.Avalonia.MusicStore/.idea/
+
+src/Avalonia.CrossPlatform.MusicStore/.idea/.idea.Avalonia.CrossPlatform.MusicStore/.idea/

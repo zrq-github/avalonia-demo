@@ -3,7 +3,11 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Avalonia.MusicStore/Avalonia.MusicStore/App.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.Browser/Avalonia.MusicStore.Browser.csproj" />
+        <entry key="Avalonia.MusicStore/Avalonia.MusicStore/Icons.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.Browser/Avalonia.MusicStore.Browser.csproj" />
+        <entry key="Avalonia.MusicStore/Avalonia.MusicStore/Views/AlbumView.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.Browser/Avalonia.MusicStore.Browser.csproj" />
         <entry key="Avalonia.MusicStore/Avalonia.MusicStore/Views/MainView.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.Browser/Avalonia.MusicStore.Browser.csproj" />
+        <entry key="Avalonia.MusicStore/Avalonia.MusicStore/Views/MainWindow.axaml" value="Avalonia.MusicStore/Avalonia.MusicStore.Browser/Avalonia.MusicStore.Browser.csproj" />
       </map>
     </option>
   </component>
