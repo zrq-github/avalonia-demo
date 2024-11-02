@@ -1,4 +1,6 @@
-﻿namespace Avalonia.CrossPlatform.MusicStore.ViewModels;
+﻿using Avalonia.MusicStore.ViewModels;
+
+namespace Avalonia.CrossPlatform.MusicStore.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
