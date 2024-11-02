@@ -7,6 +7,10 @@
              xmlns:vm="using:Avalonia.MusicStore.ViewModels"
              x:DataType="vm:MusicStoreViewModel">
     <DockPanel>
+        <Button Content="Buy Album"
+                DockPanel.Dock="Top"
+                HorizontalAlignment="Left"
+                Command="{Binding BuyMusicCommand}"/>
         <StackPanel DockPanel.Dock="Top">
             <TextBox Text="{Binding SearchText }" Watermark="Search for Albums...." />
             <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
@@ -21,9 +25,5 @@
                 </ListBox.ItemsPanel>
             </ListBox>
         </StackPanel>
-        <Button Content="Buy Album"
-                DockPanel.Dock="Bottom"
-                HorizontalAlignment="Center" />
-        <ListBox />
     </DockPanel>
 </UserControl>
