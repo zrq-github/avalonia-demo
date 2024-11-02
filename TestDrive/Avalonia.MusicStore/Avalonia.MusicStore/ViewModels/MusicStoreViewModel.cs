@@ -1,16 +1,15 @@
-﻿using Avalonia.MusicStore.Models;
-using ReactiveUI;
-using System;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.Reactive.Linq;
-using System.Threading;
+using Avalonia.MusicStore.Models;
+using ReactiveUI;
 
 namespace Avalonia.MusicStore.ViewModels;
 
-public class MusicStoreViewModel: ViewModelBase
+public class MusicStoreViewModel : ViewModelBase
 {
-    private string? _searchText;
     private bool _isBusy;
+    private string? _searchText;
     private AlbumViewModel? _selectedAlbum;
 
     public MusicStoreViewModel()
@@ -20,7 +19,33 @@ public class MusicStoreViewModel: ViewModelBase
             .ObserveOn(RxApp.MainThreadScheduler)
             .Subscribe(DoSearch!);
     }
-    
+
+    public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
+
+    public AlbumViewModel? SelectedAlbum
+    {
+        get => _selectedAlbum;
+        set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
+    }
+
+    /// <summary>
+    ///     搜过字符串
+    /// </summary>
+    public string? SearchText
+    {
+        get => _searchText;
+        set => this.RaiseAndSetIfChanged(ref _searchText, value);
+    }
+
+    /// <summary>
+    ///     是否正在查询
+    /// </summary>
+    public bool IsBusy
+    {
+        get => _isBusy;
+        set => this.RaiseAndSetIfChanged(ref _isBusy, value);
+    }
+
     private async void DoSearch(string s)
     {
         IsBusy = true;
@@ -38,31 +63,5 @@ public class MusicStoreViewModel: ViewModelBase
         }
 
         IsBusy = false;
-    }
-    
-    public ObservableCollection<AlbumViewModel> SearchResults { get; } = new();
-    
-    public AlbumViewModel? SelectedAlbum
-    {
-        get => _selectedAlbum;
-        set => this.RaiseAndSetIfChanged(ref _selectedAlbum, value);
-    }
-    
-    /// <summary>
-    /// 搜过字符串
-    /// </summary>
-    public string? SearchText
-    {
-        get => _searchText;
-        set => this.RaiseAndSetIfChanged(ref _searchText, value);
-    }
-
-    /// <summary>
-    /// 是否正在查询
-    /// </summary>
-    public bool IsBusy
-    {
-        get => _isBusy;
-        set => this.RaiseAndSetIfChanged(ref _isBusy, value);
     }
 }
